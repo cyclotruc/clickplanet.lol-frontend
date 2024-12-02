@@ -5,6 +5,6 @@ import glsl from 'vite-plugin-glsl'
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [react(), glsl()],
-    base: "/"
+    base: process.env.NODE_ENV === "production" ? "/<repo-name>/" : "/"
 })
 
