@@ -18,30 +18,30 @@ npm run dev
 
 ## Deployment
 
-1. Make sure your code is committed and pushed to GitHub.
-
-2. If this is your first deployment:
+1. Enable GitHub Pages:
    - Go to your GitHub repository
    - Navigate to Settings > Pages
-   - In the "Source" section, select "GitHub Actions"
+   - Under "Build and deployment":
+     - Source: Select "GitHub Actions"
+   - Save the changes
 
-3. Deploy your site:
-```bash
-npm run deploy
-```
+2. The site will automatically deploy when you:
+   - Push to the main branch
+   - Or manually trigger the workflow from the Actions tab
 
-4. Your site will be available at: `https://<your-github-username>.github.io/<repo-name>/`
+3. Your site will be available at: `https://<your-github-username>.github.io/<repo-name>/`
 
 ## Notes
 
-- The site will be deployed to the `gh-pages` branch automatically
-- Each time you want to deploy updates, just run `npm run deploy`
-- Make sure your repository is public or you have GitHub Pages enabled in your GitHub plan
+- The site is automatically built and deployed via GitHub Actions
+- Each push to main will trigger a new deployment
+- You can also manually trigger deployments from the Actions tab
 - The first deployment might take a few minutes to become available
 
 ## Troubleshooting
 
 If you encounter any issues:
 1. Make sure your repository name is correctly set in `vite.config.ts`
-2. Ensure you have proper write permissions to the repository
-3. Check if GitHub Pages is enabled in your repository settings
+2. Check the Actions tab for any workflow failures
+3. Ensure GitHub Pages is enabled in your repository settings
+4. Verify you have the correct permissions set up

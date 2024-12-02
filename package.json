@@ -10,9 +10,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "proto": "npx buf generate",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "proto": "npx buf generate"
   },
   "dependencies": {
     "@bufbuild/protobuf": "^1.10.0",
